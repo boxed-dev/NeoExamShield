@@ -1,0 +1,16 @@
+{
+  "name": "neo-exam-shield",
+  "version": "2.0.0",
+  "description": "To prevent malpractice, identifies and blocks third-party browser extensions during tests on the iamneo portal.",
+  "main": "background.js",
+  "scripts": {
+    "terser": "terser background.js -c -m -o minifiedBackground.js && terser contentScript.js -c -m -o minifiedContentScript.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javith",
+  "license": "ISC",
+  "dependencies": {
+    "neo-exam-shield": "file:",
+    "terser": "^5.19.2"
+  }
+}

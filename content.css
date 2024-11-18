@@ -1,0 +1,157 @@
+body {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+}
+
+#chat-container {
+    position: fixed;
+    z-index: 99999;
+    bottom: 10px;
+    left:10px;
+    width: 450px;
+    height: 600px;
+    background-color: #f8f9fa;
+    border: 1px solid;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.show {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+pre{
+    white-space: break-spaces;
+}
+
+#chat {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.message-user {
+    background-color: #e5e5e5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+.message-assistant {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+#chat-input {
+    height: 100px;
+    display: flex;
+    background-color: #f8f9fa;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    color: black;
+}
+
+#send-button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+#send-button svg {
+    width: 28px;
+    height: 28px;
+}
+
+#send-button:hover svg {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+}
+
+#toolbar {
+    display: flex;
+}
+
+#access-key {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid;
+    outline: none;
+    font-size: 16px;
+}
+
+#engine {
+    padding: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
